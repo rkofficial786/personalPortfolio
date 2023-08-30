@@ -150,7 +150,7 @@ const Hero = () => {
           <p className="md:w-[400px] sm:w-[280px]">
           As a dedicated MERN stack developer, I am passionate about crafting innovative and efficient web applications that harness the power of modern technologies. With a strong foundation in both frontend and backend development, I have honed my skills to deliver seamless user experiences and robust functionality.
           </p>
-          <button class="hover-button text-xl">Hire Me</button>
+         <a href="#contact"> <button class="hover-button text-xl">Hire Me</button></a>
         </div>
 
         <div className=" md:w-auto w-[240px]">
