@@ -1,0 +1,169 @@
+/* write your css here */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%); /* Move the element by the full parent width */
+  }
+  100% {
+    transform: translateX(0); /* Move the element by the full parent width */
+  }
+}
+.gradient1 {
+  width: 372.95px;
+  height: 257.05px;
+  border-radius: 100%;
+  /* left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px); */
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    #ffa500 59.04%,
+    #f8f8ff 124.53%
+  );
+  opacity: 0.8;
+  filter: blur(34px);
+  /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+  animation: moveAnimation 8s ease-in-out infinite;
+}
+
+
+.gradient2 {
+  /* width: 372.95px;
+  height: 257.05px; */
+  border-radius: 100%;
+  /* left: calc(50% - 372.95px / 2 - 76.53px);
+    top: calc(50% - 257.05px / 2 - 47.47px); */
+  background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    #ffa500 59.04%,
+    #f8f8ff 124.53%
+  );
+  opacity: 0.8;
+  filter: blur(34px);
+  /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+  animation: upAnimation 14s ease-in-out infinite;
+}
+
+@keyframes upAnimation {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(300%); /* Move the element by the full parent width */
+  }
+  100% {
+    transform: translatey(0); /* Move the element by the full parent width */
+  }
+}
+
+
+
+.gradient3 {
+	
+	width: 372.95px;
+	height: 257.05px;
+	/* left: calc(50% - 372.95px / 2 - 76.53px);
+	top: calc(50% - 257.05px / 2 - 47.47px); */
+	border-radius: 100%;
+	background: linear-gradient(
+	  118.19deg,
+	  #1fa2ff -3.62%,
+	  #12d8fa 50.44%,
+	  #a6ffcb 104.51%
+	);
+	opacity: 0.4;
+	filter: blur(34px);
+	transform: matrix(1, 0, -0.03, 1, 0, 0);
+  }
+
+  .form-style {
+    @apply rounded-lg bg-transparent p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+  }
+
+
+
+
+
+
+
+
+  /* 4 5 */
+
+  .gradient4 {
+    width: 372.95px;
+    height: 257.05px;
+    border-radius: 100%;
+    /* left: calc(50% - 372.95px / 2 - 76.53px);
+      top: calc(50% - 257.05px / 2 - 47.47px); */
+    background: linear-gradient(
+      123.77deg,
+      #0033c9 -6.46%,
+      #6dd5fa 59.04%,
+      #0C6A87 124.53%
+    );
+    opacity: 0.6;
+    filter: blur(34px);
+    /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+    animation: moveAnimation 8s ease-in-out infinite;
+  }
+  
+  
+  .gradient5 {
+    /* width: 372.95px;
+    height: 257.05px; */
+    border-radius: 100%;
+    /* left: calc(50% - 372.95px / 2 - 76.53px);
+      top: calc(50% - 257.05px / 2 - 47.47px); */
+    background: linear-gradient(
+      123.77deg,
+      #0033c9 -6.46%,
+      #6dd5fa 59.04%,
+      #0C6A87 124.53%
+    );
+    opacity: 0.6;
+    filter: blur(34px);
+    /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+    animation: upAnimation 14s ease-in-out infinite;
+  }
