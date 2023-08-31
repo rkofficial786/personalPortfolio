@@ -15,6 +15,13 @@ import { BsBrightnessHighFill } from "react-icons/bs";
 function App() {
   const dispatch = useDispatch();
   const { isDarkMode } = useSelector((state) => state.darkmode);
+
+  const applyDarkMode = () => {
+    const newDarkModeValue = !isDarkMode; // Toggle the value
+    dispatch(setIsDarkMode(newDarkModeValue)); // Update the state
+    localStorage.setItem("darkmode", newDarkModeValue); // Store the updated value in localStorage
+  }
+  
   return (
     <div
       className={`relative w-full ${
@@ -24,7 +31,7 @@ function App() {
       }`}
     >
       <button
-        onClick={() => dispatch(setIsDarkMode(!isDarkMode))}
+        onClick={applyDarkMode }
         className="fixed top-[3%] lg:top-[10%] left-[10%] text-2xl z-[1000]"
       >
         {isDarkMode ? <BsBrightnessHighFill /> : <MdDarkMode />}
