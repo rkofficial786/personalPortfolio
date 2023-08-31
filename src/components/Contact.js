@@ -163,15 +163,15 @@ const Contact = () => {
                     </a>
                   </span> */}
                   <span className="justify-center flex items-center gap-3">
-                    <Link to={"https://www.instagram.com/rkofficial165/"}>
+                    <Link to={"https://www.instagram.com/rkofficial165/"} target="_blank">
                       {" "}
                       <AiOutlineInstagram className="text-2xl hover:text-pink-200 hover:scale-125 transition-all ease-in-out duration-200" />
                     </Link>
-                    <Link to={"https://www.linkedin.com/in/rupraj-singh/"}>
+                    <Link to={"https://www.linkedin.com/in/rupraj-singh/"} target="_blank">
                       {" "}
                       <AiOutlineLinkedin  className="text-2xl hover:text-bluyish-400 hover:scale-125 transition-all ease-in-out duration-200" />
                     </Link>
-                    <Link to={"https://github.com/rkofficial786"}>
+                    <Link to={"https://github.com/rkofficial786"} target="_blank">
                       {" "}
                       <AiOutlineGithub  className="text-2xl hover:text-black hover:scale-125 transition-all ease-in-out duration-200" />
                     </Link>

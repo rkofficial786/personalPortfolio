@@ -63,7 +63,7 @@
   );
   opacity: 0.8;
   filter: blur(34px);
-  /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
   animation: moveAnimation 8s ease-in-out infinite;
 }
 
@@ -82,7 +82,7 @@
   );
   opacity: 0.8;
   filter: blur(34px);
-  /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+  transform: matrix(1, 0, -0.03, 1, 0, 0);
   animation: upAnimation 14s ease-in-out infinite;
 }
 
@@ -145,7 +145,7 @@
     );
     opacity: 0.6;
     filter: blur(34px);
-    /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
     animation: moveAnimation 8s ease-in-out infinite;
   }
   
@@ -164,6 +164,7 @@
     );
     opacity: 0.6;
     filter: blur(34px);
-    /* transform: matrix(1, 0, -0.03, 1, 0, 0); */
+    transform: matrix(1, 0, -0.03, 1, 0, 0);
     animation: upAnimation 14s ease-in-out infinite;
   }
+

@@ -32,9 +32,12 @@ const vectorAnimation = keyframes`
 `;
 
 const AnimatedVector = styled.img`
+filter: drop-shadow(16px 16px 16px #091072);
   position: absolute;
   z-index: -10;
   animation: ${vectorAnimation} 5s infinite;
+ 
+
 `;
 
 const About = () => {
@@ -67,7 +70,7 @@ const About = () => {
             <img     className='w-[40px] hover:scale-125 transition-all ease-in-out duration-500'  src={Vercel} alt="" />
             <img     className='w-[40px] hover:scale-125 transition-all ease-in-out duration-500'  src={Git} alt="" />
 
-            <AnimatedVector src={vector} alt='' />
+            <AnimatedVector src={vector} alt='' className={`${isDarkMode?"":""}`} />
             
             
 

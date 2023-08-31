@@ -13,7 +13,7 @@ import { useSelector } from "react-redux";
 const Skills = () => {
   const {isDarkMode} =useSelector((state)=>state.darkmode)
   return (
-    <div id="experience" className=" w-11/12 lg:w-5/12 mx-auto mt-[100px]">
+    <div id="experience" className="  w-11/12 lg:w-5/12 mx-auto mt-[100px]">
       <div className={`hover:shadow-inner shadow-md shadow-blue-300 hover:shadow-blue-300 group relative backdrop-blur-lg ${isDarkMode?"bg-richblue-400":"bg-richblack-200 bg-opacity-10"}  hover:bg-opacity-20 transition-all ease-in-out duration-500 group rounded-2xl bg-opacity-40 py-[30px] `}>
         <div className=" hidden lg:block gradient3 top-6 -left-[0%] absolute transition-all ease-in-out duration-500 group-hover: group-hover:translate-x-[100%]"></div>
 
