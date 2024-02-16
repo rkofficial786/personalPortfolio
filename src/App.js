@@ -11,6 +11,7 @@ import { CiDark } from "react-icons/ci";
 import Topbar from "./components/topbar/Topbar";
 import { setIsDarkMode } from "./redux/darkSlice";
 import { BsBrightnessHighFill } from "react-icons/bs";
+import Experience from "./components/Experience";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,18 +21,18 @@ function App() {
     const newDarkModeValue = !isDarkMode; // Toggle the value
     dispatch(setIsDarkMode(newDarkModeValue)); // Update the state
     localStorage.setItem("darkmode", newDarkModeValue); // Store the updated value in localStorage
-  }
-  
+  };
+
   return (
     <div
       className={`relative w-full ${
         isDarkMode
-          ? "bg-gradient-to-tl from-bluyish-300 via-bluyish-200 to-bluyish-300 text-white"
+          ? "bg-gradient-to-tl  from-bluyish-300 via-bluyish-200 to-bluyish-300 text-white"
           : "bg-gradient-to-tl  from-[#2980b9] via-[#ffffff] to-[#6dd5fa] text-black"
       }`}
     >
       <button
-        onClick={applyDarkMode }
+        onClick={applyDarkMode}
         className="fixed top-[3%] lg:top-[10%] left-[10%] text-2xl z-[1000]"
       >
         {isDarkMode ? <BsBrightnessHighFill /> : <MdDarkMode />}
@@ -41,6 +42,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Experience/>
       <Testimonials />
       <Contact />
     </div>

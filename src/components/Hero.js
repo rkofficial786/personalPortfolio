@@ -118,13 +118,20 @@ const Hero = () => {
         className="flex justify-between gap-[100px] lg:w-8/12  mx-auto w-11/12 items-center   flex-col md:flex-row py-[100px] "
       >
         <div className="flex flex-col justify-center sm:w-[260px] md:w-[600px]   gap-[30px]">
-          <h1 className="text-4xl">
-            Hi, {" "}
-            <span className="bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text font-bold">
-            Rupraj Singh</span>{" "}
+          <h1 className="text-4xl flex flex-col">
+            <h1> Hi, </h1>
+            <span
+              style={{ lineHeight: 1.5 }}
+              className="bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text font-bold"
+            >
+              Rupraj Singh
+            </span>{" "}
+            <span className="w-fit bg-gradient-to-r from-[#4A90E2] to-[#F09819] text-[#09fbff] text-base px-2 py-1 rounded-md font-bold">
+              Software Engineer at AtticBits Solutions Pvt. Ltd.
+            </span>
           </h1>
-          <h1 className="text-5xl">
-            I am a{" "}
+          <h1 className="text-5xl flex flex-col">
+            <h1> I am a </h1>
             <span
               className={`text-[45px] ${
                 isDarkMode ? "text-[#09fbff]" : "text-violet-400"
@@ -133,8 +140,9 @@ const Hero = () => {
               {" "}
               <TypeAnimation
                 sequence={[
-                  "Full Stack Developer",
                   "Mern Stack Developer",
+                  "NextJs Developer",
+                  "React Native Developer",
                   9000,
                   "",
                 ]}
@@ -148,9 +156,16 @@ const Hero = () => {
             </span>{" "}
           </h1>
           <p className="md:w-[400px] sm:w-[280px]">
-          As a dedicated MERN stack developer, I am passionate about crafting innovative and efficient web applications that harness the power of modern technologies. With a strong foundation in both frontend and backend development, I have honed my skills to deliver seamless user experiences and robust functionality.
+            As a dedicated MERN stack developer, I am passionate about crafting
+            innovative and efficient web applications that harness the power of
+            modern technologies. With a strong foundation in both frontend and
+            backend development, I have honed my skills to deliver seamless user
+            experiences and robust functionality.
           </p>
-         <a href="#contact"> <button class="hover-button text-xl">Hire Me</button></a>
+          <a href="#contact">
+            {" "}
+            <button class="hover-button text-xl">Hire Me</button>
+          </a>
         </div>
 
         <div className=" md:w-auto w-[240px]">
