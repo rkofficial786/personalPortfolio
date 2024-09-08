@@ -7,96 +7,162 @@ import "swiper/css/navigation";
 
 import { FreeMode, Pagination, Autoplay, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import HighLightText from "./HighLightText";
 import { useSelector } from "react-redux";
 
 const Testimonials = () => {
-  const testimonials = [
+  const experiences = [
     {
       id: 1,
-      link: "",
-      name: "Nəsibəli YUSIBOV",
-      role: "Cyber Security Engineer ",
-      test: "As a developer and a problem solver, I think Rasif is a great collaborative partner to have. I met Rasif in some basic javascript & react projects and since then he has drastically progressed in him understanding of the development process. He always has a professional environment and has good audio and video quality which makes it easier to communicate with him.",
+      company: "AtticBits Solutions Pvt. Ltd.",
+      role: "Software Engineer",
+      duration: "Sept 2023 - Present",
+      achievements: [
+        "Developed and maintained various projects using modern web technologies.",
+        "Implemented WebSocket functionality for a resume processing system in a Next.js project.",
+        "Created an end-to-end booking website with features like hotel bookings, tours, ticketing, and an admin panel using React.",
+        "Developed an asset management app using React Native for efficient inventory tracking.",
+        "Built an admin panel using React to manage API services and update various content details.",
+      ],
+      link: "https://www.linkedin.com/company/atticbits/posts/?feedView=all",
     },
     {
       id: 2,
-      link: "",
-      name: "Raul Omarov",
-      role: "Technical Support Engineer ",
-      test: "It was a pleasure collaborating with Rasif on different projects. One of the things that I think is special about him is that he never settles, even after completing the projects he finds other resources and strengthens him knowledge. Collaborating with him is easy and comfortable, it's like working with someone you've known for a long period of time.",
+      company: "PwSkills",
+      role: "Full Stack Developer Intern",
+      duration: "June - July 2023",
+      achievements: [
+        "Developed a full-fledged online cake order app using MERN stack, incorporating responsive design principles for optimal user experience across devices.",
+        "Implemented advanced features including real-time product browsing, intelligent search algorithms, multi-parameter filtering, and a robust cart management system.",
+        "Engineered a secure checkout process with  payment gateway integrations, ensuring safe transactions for customers.",
+        "Created a comprehensive admin panel for efficient product management, real-time order tracking, and detailed analytics reporting.",
+      ],
+      link: "https://pwskills.com/",
+      icon: AiFillLinkedin,
     },
     {
       id: 3,
-      link: "",
-      name: "Ağası Xəlilov",
+      company: "Freelance Projects",
       role: "Full Stack Developer",
-      test: "I worked with Rasif in the same team and him communication skills are very strong. Him programming skill is one of the bests, given the time frame in the field. He is a good team player.  He will probably fit in most of the companies not only because he's a good team worker, but also because he has very good skills and I know he has much more potential to be shown.",
-    },
-    {
-      id: 4,
-      link: "",
-      name: "Javid Aliyev",
-      role: "Full-Stack Web Developer",
-      test: "I mentored Rasif some months ago, and I can say that he is one of those people that you love to work with. He was always interested in what I was trying to teach him, paying attention and always asking questions if something was not clear. When it comes to professional skills, he is really committed to work, always doing him best and going beyond the requirements of the project he's building.",
-    },
-    {
-      id: 5,
-      link: "",
-      name: "Elshad Bashirov",
-      role: "Software Developer",
-      test: "Throughout all our collaborations, Rasif has always conducted herself politely and kindly. He comes across as someone that's always willing to help and puts the team ahead of himself. But beneath this, I see a strength and determination to distinguish himself. He's not only someone I highly recommend but is also someone I greatly respect.",
+      duration: "2022 - Present",
+      achievements: [
+        "Developed custom web applications for diverse clients using React, Node.js, and NextJs, focusing on scalable and maintainable code architecture.",
+        "Created responsive and user-friendly interfaces for e-commerce platforms, implementing advanced UI/UX design principles to enhance customer engagement and conversion rates.",
+        "Engineered and integrated secure payment gateways and third-party APIs, ensuring seamless functionality and data synchronization across various services.",
+        "Implemented robust testing strategies including unit tests and end-to-end testing to ensure high-quality, bug-free",
+      ],
+      link: "https://github.com/rkofficial786",
+      icon: AiFillGithub,
     },
   ];
 
-  const {isDarkMode} =useSelector((state)=>state.darkmode)
-  return (
-    <section id="testmonials" className="mt-[100px] mx-auto w-11/12 lg:w-6/12" >
-      
-      <h2 className="text-center text-[30px]"><HighLightText text={"Testimonials"}/></h2>
+  const { isDarkMode } = useSelector((state) => state.darkmode);
 
-      <div className=" mt-[60px] ">
-        {testimonials?.length ? (
-          <div className={`${isDarkMode?"bg-richblack-600 shadow-inner shadow-blue-200 ":" shadow-lg shadow-violet-5"} rounded-xl bg-opacity-40 relative p-4 w-full`}>
-            <div className="absolute text-sm">Dummy</div>
+  const getIconColor = (company) => {
+    if (company === "AtticBits Solutions Pvt. Ltd." || company === "PwSkills") {
+      return isDarkMode
+        ? "text-blue-300 hover:text-blue-200"
+        : "text-blue-600 hover:text-blue-500";
+    } else {
+      return isDarkMode
+        ? "text-gray-300 hover:text-gray-200"
+        : "text-gray-700 hover:text-gray-600";
+    }
+  };
+
+  return (
+    <section id="experiences" className="mt-[100px] mx-auto w-11/12 lg:w-6/12">
+      <h2 className="text-center text-[30px]">
+        <HighLightText text={"Professional Experience"} />
+      </h2>
+
+      <div className="mt-[60px]">
+        {experiences?.length ? (
+          <div
+            className={`${
+              isDarkMode
+                ? "bg-richblack-600 shadow-inner shadow-blue-200"
+                : "shadow-lg shadow-violet-5"
+            } rounded-xl bg-opacity-40 relative p-4 w-full`}
+          >
             <Swiper
               slidesPerView={1}
               spaceBetween={30}
-              freeMode={true}
-              // loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
+              // freeMode={true}
+              // autoplay={{
+              //   delay: 5000,
+              //   disableOnInteraction: false,
+              // }}
               pagination={{
                 clickable: true,
               }}
-              // navigation={true}
               modules={[FreeMode, Pagination, Autoplay, Navigation]}
-              breakpoints={{
-                // 1900: { slidesPerView: 3 },
-                // 900: { slidesPerView: 2 },
-                // 1400: { slidesPerView: 3 },
-              }}
-              className=" flex items-center justify-center mx-auto"
+              className="flex items-center justify-center mx-auto"
             >
-              {testimonials?.map((testi, index) => {
+              {experiences?.map((exp, index) => {
                 return (
-                  <SwiperSlide
-                    key={index}
-                    className="mySwiper flex items-center justify-center"
-                  >
-                    <div className="flex flex-col  items-center justify-center gap-5">
-                      <Link to={testi.link}>
-                        <AiFillLinkedin className="text-[50px] text-blue-300 hover:text-white"/>
-                      </Link>
-                      <div className="flex items-center font-semibold justify-center gap-2">
-                        <p className="font-semibold">{testi.name}</p>
-                        <p>|</p>
-                        <p  className="font-semibold">{testi.role}</p>
+                  <SwiperSlide key={index} className="mySwiper">
+                    <div
+                      className={`
+                    flex flex-col items-start justify-center gap-8 p-10 rounded-2xl
+                    ${
+                      isDarkMode
+                        ? "bg-gradient-to-br  text-blue-50 backdrop-blur-sm"
+                        : "bg-gradient-to-br from-white to-gray-100 text-richblack-900"
+                    }
+                    transition-all duration-300 hover:scale-[1.02] 
+                  `}
+                    >
+                      <div className="relative w-full">
+                        <h3 className="text-4xl font-extrabold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                          {exp.company}
+                        </h3>
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-lg">
+                          <p className="font-semibold italic">{exp.role}</p>
+                          <p className="hidden sm:block text-blue-500">•</p>
+                          <p
+                            className={`${
+                              isDarkMode ? "text-gray-400" : "text-gray-600"
+                            } font-light`}
+                          >
+                            {exp.duration}
+                          </p>
+                        </div>
+                        <Link
+                          to={exp.link}
+                          className="absolute top-0 right-0 transition-transform duration-300 hover:scale-110"
+                        >
+                          {exp.company === "AtticBits Solutions Pvt. Ltd." ||
+                          exp.company === "PwSkills" ? (
+                            <AiFillLinkedin
+                              className={`text-5xl ${getIconColor(
+                                exp.company
+                              )}`}
+                            />
+                          ) : (
+                            <AiFillGithub
+                              className={`text-5xl ${getIconColor(
+                                exp.company
+                              )}`}
+                            />
+                          )}
+                        </Link>
                       </div>
-                      <p className={`text-center ${isDarkMode?"text-richblack-50":" text-richblack-600"} `}>{testi.test}</p>
+                      <ul
+                        className={`space-y-4 ${
+                          isDarkMode ? "text-gray-300" : "text-gray-700"
+                        }`}
+                      >
+                        {exp.achievements.map((achievement, i) => (
+                          <li key={i} className="flex items-start group">
+                            <span className="inline-block w-2 h-2 mt-2 mr-3 bg-blue-500 rounded-full group-hover:scale-150 transition-all duration-300"></span>
+                            <p className="flex-1 leading-relaxed group-hover:translate-x-1 transition-all duration-300">
+                              {achievement}
+                            </p>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </SwiperSlide>
                 );
@@ -104,7 +170,7 @@ const Testimonials = () => {
             </Swiper>
           </div>
         ) : (
-          <p className="text-center">No Reviews Found</p>
+          <p className="text-center">No Experience Found</p>
         )}
       </div>
     </section>

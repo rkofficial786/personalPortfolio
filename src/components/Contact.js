@@ -98,7 +98,7 @@ const Contact = () => {
                     href="mailto:rkofficial1234500@gmail.com"
                     class="bg-gradient-to-b from-[#FF512F] to-[#F09819] text-transparent bg-clip-text font-bold"
                   >
-                    rkofficial1234500@gmail.com
+                    ruprajsingh1@gmail.com
                   </a>
                   <p class="leading-normal my-5">
                     Shaitan gali, khatra mahal, andher nagar, shamshan ke samne

@@ -17,7 +17,7 @@ const Projects = () => {
         "An comprehensive educational Web-app for students and instructors ",
       technologies: "React| Node | Express | MongoDb | Redux",
       link: "https://codemy.onrender.com/",
-      github: "https://github.com/rkofficial786?tab=repositories",
+      github: "https://github.com/rkofficial786/Codemy",
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const Projects = () => {
   return (
     <div id="portfolio" className="mt-[100px] mx-auto w-11/12 md:w-8/12">
       <h1 className="text-center text-3xl my-[20px]">
-        <HighLightText text={"Projects"} />
+        <HighLightText text={"Personal Projects"} />
       </h1>
       <div className="flex relative items-center justify-center gap-6  flex-wrap ">
         {/* bg-light when dark mode enabled */}

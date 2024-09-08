@@ -126,7 +126,13 @@ const Hero = () => {
             >
               Rupraj Singh
             </span>{" "}
-            <span className="w-fit bg-gradient-to-r from-[#4A90E2] to-[#F09819] text-[#09fbff] text-base px-2 py-1 rounded-md font-bold">
+            <span
+              className={`w-fit text-base px-2 py-1 rounded-md font-bold ${
+                isDarkMode
+                  ? "bg-gradient-to-r from-[#1e3a8a] to-[#F09819] text-[#09fbff]"
+                  : "bg-gradient-to-r from-[#4A90E2] to-[#F09819] text-[#333]"
+              }`}
+            >
               Software Engineer at AtticBits Solutions Pvt. Ltd.
             </span>
           </h1>
